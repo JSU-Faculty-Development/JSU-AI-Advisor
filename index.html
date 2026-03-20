@@ -803,7 +803,7 @@ async function callAPI() {
     const res = await fetch('/.netlify/functions/claude-proxy', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'claude-opus-4-5', max_tokens: 1800, system: sys, messages: history })
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 1800, system: sys, messages: history })
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error?.message || 'API error');
