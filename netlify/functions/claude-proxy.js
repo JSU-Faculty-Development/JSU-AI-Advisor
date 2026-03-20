@@ -5,6 +5,10 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+  const body = event.isBase64Encoded 
+    ? Buffer.from(event.body, 'base64').toString('utf8') 
+    : event.body;
+
   return new Promise((resolve) => {
     const options = {
       hostname: 'api.anthropic.com',
@@ -14,7 +18,7 @@ exports.handler = async function(event) {
         'Content-Type': 'application/json',
         'x-api-key': process.env.ANTHROPIC_API_KEY,
         'anthropic-version': '2023-06-01',
-        'Content-Length': Buffer.byteLength(event.body)
+        'Content-Length': Buffer.byteLength(body)
       }
     };
 
@@ -24,20 +28,22 @@ exports.handler = async function(event) {
       res.on('end', () => {
         resolve({
           statusCode: res.statusCode,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          },
           body: data
         });
       });
     });
 
     req.on('error', (err) => {
-  resolve({
-    statusCode: 500,
-    body: JSON.stringify({ error: { message: err.message, type: 'connection_error' } })
-  });
-});
+      resolve({
+        statusCode: 500,
+        body: JSON.stringify({ error: { message: err.message } })
+      });
+    });
 
-    req.write(event.body);
+    req.write(body);
     req.end();
   });
-};
