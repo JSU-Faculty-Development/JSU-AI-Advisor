@@ -14,59 +14,42 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text)}
 
-/* KEY SCREEN */
-#key-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;background:linear-gradient(135deg,#0f2447 0%,var(--navy) 60%,#1e4a8a 100%)}
-.key-card{background:white;border-radius:16px;padding:44px 48px;max-width:520px;width:100%;box-shadow:0 8px 48px rgba(0,0,0,.25);border-top:5px solid var(--gold)}
-.key-logo{width:52px;height:52px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-weight:700;color:var(--gold);font-size:20px;margin-bottom:20px;box-shadow:0 4px 16px rgba(27,58,107,.3)}
-.key-card h1{font-family:'Crimson Pro',serif;font-size:27px;color:var(--navy);margin-bottom:6px;line-height:1.2}
-.key-badge{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.13);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:14px}
-.key-card p{color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:22px}
-.key-note{background:var(--gold-bg);border-radius:8px;padding:12px 16px;font-size:12.5px;color:#7A5200;margin-bottom:22px;line-height:1.6}
-.key-note strong{display:block;margin-bottom:2px}
-.key-error{background:#fff0f0;border:1px solid #fca5a5;color:#dc2626;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;display:none}
 .inp{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text);background:#FAFBFD;transition:border-color .18s;margin-bottom:12px}
 .inp:focus{outline:none;border-color:var(--navy-l);background:white}
-.btn-navy{width:100%;padding:13px;background:var(--navy);color:white;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .18s}
-.btn-navy:hover{background:var(--navy-l);transform:translateY(-1px);box-shadow:0 4px 16px rgba(27,58,107,.3)}
-.key-link{display:block;text-align:center;margin-top:12px;font-size:12px;color:var(--muted)}
-.key-link a{color:var(--navy);text-decoration:none;font-weight:500}
-.key-link a:hover{text-decoration:underline}
+.btn-navy{width:100%;padding:13px;background:var(--navy);color:white;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .18s}
+.btn-navy:hover{background:var(--navy-l)}
 
 /* APP SHELL */
 #app{display:none;height:100vh;flex-direction:column}
 .hdr{background:var(--navy);padding:12px 24px;display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--gold);flex-shrink:0}
-.hdr-logo{width:36px;height:36px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-weight:700;color:var(--navy);font-size:14px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.hdr-logo{width:34px;height:34px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-weight:700;color:var(--navy);font-size:13px;flex-shrink:0}
 .hdr-info{flex:1}
 .hdr-title{font-family:'Crimson Pro',serif;color:#fff;font-size:17px;font-weight:600;display:flex;align-items:center;gap:8px}
 .hdr-v{font-size:11px;background:rgba(201,168,76,.25);color:var(--gold-l);padding:2px 7px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:500}
 .hdr-sub{color:rgba(201,168,76,.75);font-size:11px;margin-top:1px}
-.hdr-btns{display:flex;gap:8px}
 .hdr-reset{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .18s}
-.hdr-reset:hover{background:rgba(255,255,255,.18);color:white}
+.hdr-reset:hover{background:rgba(255,255,255,.18)}
 
 /* HOME SCREEN */
-#home-screen{flex:1;overflow-y:auto;padding:40px 20px 60px}
-.home-inner{max-width:720px;margin:0 auto}
+#home-screen{flex:1;overflow-y:auto;padding:36px 20px 60px}
+.home-inner{max-width:700px;margin:0 auto}
 .home-tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.home-title{font-family:'Crimson Pro',serif;font-size:36px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:10px}
+.home-title{font-family:'Crimson Pro',serif;font-size:34px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:10px}
 .home-desc{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:36px;max-width:580px}
 .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:32px}
 @media(max-width:600px){.path-grid{grid-template-columns:1fr}}
 .path-card{background:white;border-radius:14px;padding:28px;box-shadow:0 2px 16px rgba(27,58,107,.08);border:2px solid transparent;cursor:pointer;transition:all .2s;text-align:left}
-.path-card:hover{border-color:var(--gold);box-shadow:0 6px 28px rgba(27,58,107,.16);transform:translateY(-2px)}
-.path-icon{font-size:30px;margin-bottom:14px;display:block}
-.path-title{font-family:'Crimson Pro',serif;font-size:21px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.path-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(27,58,107,.14);transform:translateY(-2px)}
+.path-icon{font-size:28px;margin-bottom:14px;display:block}
+.path-title{font-family:'Crimson Pro',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:6px}
 .path-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
 .path-tags{display:flex;flex-wrap:wrap;gap:6px}
 .ptag{font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500}
 .ptag.blue{background:rgba(27,58,107,.08);color:var(--navy)}
 .ptag.gold{background:rgba(201,168,76,.15);color:#7A5200}
 .path-cta{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--navy);margin-top:14px}
-.home-footer{font-size:11.5px;color:var(--muted);text-align:center;padding-top:8px}
-.home-footer a{color:var(--navy);text-decoration:none;font-weight:500}
-.home-footer a:hover{text-decoration:underline}
 
-/* MODE BAR */
+/* MODE BADGE */
 .mode-bar{background:var(--gold-bg);border-bottom:1px solid rgba(201,168,76,.3);padding:7px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0}
 .mode-label{font-size:12px;font-weight:600;color:#7A5200}
 .mode-toggle{display:flex;gap:0;border-radius:6px;overflow:hidden;border:1px solid rgba(201,168,76,.4)}
@@ -75,10 +58,31 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);colo
 .mt-btn:not(.active){background:white;color:var(--navy)}
 .mode-hint{font-size:11px;color:#9A7220;margin-left:4px}
 
+/* UPLOAD ZONE */
+.upload-zone{border:2px dashed var(--border);border-radius:10px;padding:28px 20px;text-align:center;cursor:pointer;transition:all .2s;background:#FAFBFD;position:relative;margin-bottom:6px}
+.upload-zone:hover,.upload-zone.drag-over{border-color:var(--navy);background:rgba(27,58,107,.04)}
+.upload-zone.has-file{border-color:var(--green);background:rgba(26,107,58,.04);border-style:solid}
+.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.uz-icon{font-size:26px;margin-bottom:8px}
+.uz-title{font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:3px}
+.uz-sub{font-size:12px;color:var(--muted)}
+.uz-types{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.uz-type{font-size:11px;padding:2px 9px;border-radius:12px;font-weight:500;background:rgba(27,58,107,.08);color:var(--navy)}
+.file-preview{display:none;align-items:center;gap:10px;padding:10px 14px;background:var(--green-bg);border-radius:8px;margin-top:8px;border:1px solid rgba(26,107,58,.2)}
+.file-preview.show{display:flex}
+.fp-icon{font-size:20px;flex-shrink:0}
+.fp-info{flex:1;min-width:0}
+.fp-name{font-size:13px;font-weight:600;color:var(--green);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fp-size{font-size:11px;color:var(--muted);margin-top:1px}
+.fp-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:2px;line-height:1;flex-shrink:0}
+.fp-remove:hover{color:var(--warn)}
+.or-divider{display:flex;align-items:center;gap:10px;margin:14px 0 10px;color:var(--muted);font-size:12px}
+.or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+
 /* INTAKE */
 #intake-screen{flex:1;overflow-y:auto;padding:28px 20px 60px;display:none}
 .i-card{background:white;border-radius:14px;padding:32px 38px;box-shadow:0 3px 20px rgba(27,58,107,.09);border-top:4px solid var(--gold);max-width:660px;margin:0 auto}
-.i-back{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--muted);cursor:pointer;margin-bottom:20px;border:none;background:none;font-family:'DM Sans',sans-serif;padding:0}
+.i-back{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--muted);cursor:pointer;margin-bottom:20px;border:none;background:none;font-family:'DM Sans',sans-serif}
 .i-back:hover{color:var(--navy)}
 .i-title{font-family:'Crimson Pro',serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:8px}
 .i-desc{color:var(--muted);font-size:13.5px;line-height:1.65;margin-bottom:24px}
@@ -89,7 +93,6 @@ select,textarea{width:100%;padding:10px 13px;border:1.5px solid var(--border);bo
 select:focus,textarea:focus{outline:none;border-color:var(--navy-l);background:white}
 textarea{resize:vertical;min-height:80px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:560px){.row2{grid-template-columns:1fr}}
 
 /* UPGRADER */
 #upgrader-screen{flex:1;overflow-y:auto;padding:28px 20px 60px;display:none}
@@ -99,108 +102,75 @@ textarea{resize:vertical;min-height:80px}
 
 /* CHAT LAYOUT */
 #chat-view{display:none;flex:1;overflow:hidden;flex-direction:column}
-.layout{display:grid;grid-template-columns:1fr 390px;flex:1;overflow:hidden;height:100%}
-@media(max-width:780px){.layout{grid-template-columns:1fr}}
+.layout{display:grid;grid-template-columns:1fr 380px;flex:1;overflow:hidden}
+@media(max-width:750px){.layout{grid-template-columns:1fr}}
 
-/* CHAT PANEL */
+/* CHAT */
 .chat-panel{display:flex;flex-direction:column;background:white;border-right:1px solid var(--border);overflow:hidden}
-.chat-hdr{padding:12px 18px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;background:#FAFBFD}
+.chat-hdr{padding:12px 18px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:space-between}
 .chat-hdr h3{font-family:'Crimson Pro',serif;font-size:15px;color:var(--navy)}
 .chat-hdr p{font-size:11px;color:var(--muted);margin-top:1px}
 .msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
-.msgs::-webkit-scrollbar{width:5px}
-.msgs::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 .msg{display:flex;gap:9px;animation:fi .22s ease}
 @keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-.av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:2px}
+.av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
 .msg.bot .av{background:var(--navy);color:var(--gold)}
 .msg.usr{flex-direction:row-reverse}
 .msg.usr .av{background:var(--gold);color:var(--navy)}
-.bbl{max-width:84%;padding:10px 13px;border-radius:13px;font-size:13px;line-height:1.7}
+.bbl{max-width:84%;padding:10px 13px;border-radius:13px;font-size:13px;line-height:1.65}
 .msg.bot .bbl{background:var(--bg);border-radius:3px 13px 13px 13px}
 .msg.usr .bbl{background:var(--navy);color:white;border-radius:13px 3px 13px 13px}
 .bbl strong{color:var(--navy)}
 .msg.usr .bbl strong{color:var(--gold-l)}
-.bbl h3{font-family:'Crimson Pro',serif;font-size:14px;color:var(--navy);margin:10px 0 4px}
-.bbl h3:first-child{margin-top:0}
-.bbl ul{padding-left:16px;margin:4px 0}
-.bbl li{margin-bottom:3px}
 .dots{display:flex;gap:4px;align-items:center;padding:2px 0}
-.dot{width:6px;height:6px;background:var(--muted);border-radius:50%;animation:bounce 1.1s infinite}
-.dot:nth-child(2){animation-delay:.2s;background:var(--gold)}.dot:nth-child(3){animation-delay:.4s}
-@keyframes bounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-5px);opacity:1}}
-.cin-area{padding:11px 14px;border-top:1px solid var(--border);display:flex;gap:8px;flex-shrink:0;background:white}
-.cin{flex:1;padding:9px 13px;border:1.5px solid var(--border);border-radius:20px;font-size:13px;font-family:'DM Sans',sans-serif;resize:none;height:40px;line-height:1.5;max-height:100px}
+.dot{width:5px;height:5px;background:var(--muted);border-radius:50%;animation:bounce 1.1s infinite}
+.dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-4px);opacity:1}}
+.cin-area{padding:11px 14px;border-top:1px solid var(--border);display:flex;gap:8px;flex-shrink:0}
+.cin{flex:1;padding:9px 13px;border:1.5px solid var(--border);border-radius:20px;font-size:13px;font-family:'DM Sans',sans-serif;resize:none;height:40px;line-height:1.5}
 .cin:focus{outline:none;border-color:var(--navy-l)}
-.sbtn{width:40px;height:40px;background:var(--navy);color:white;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .18s}
-.sbtn:hover{background:var(--navy-l);transform:scale(1.05)}
-.sbtn:disabled{background:var(--border);cursor:not-allowed;transform:none}
+.sbtn{width:40px;height:40px;background:var(--navy);color:white;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .18s}
+.sbtn:hover{background:var(--navy-l)}
+.sbtn:disabled{background:var(--border);cursor:not-allowed}
 
 /* OUTPUT PANEL */
 .out-panel{display:flex;flex-direction:column;background:var(--bg);overflow:hidden}
-.out-hdr{padding:12px 16px;background:var(--navy);color:white;flex-shrink:0;border-bottom:2px solid var(--gold)}
+.out-hdr{padding:12px 16px;background:var(--navy);color:white;flex-shrink:0}
 .out-hdr h3{font-family:'Crimson Pro',serif;font-size:15px}
 .out-hdr p{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px}
 .out-body{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:9px}
-.out-body::-webkit-scrollbar{width:5px}
-.out-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-.oc{background:white;border-radius:9px;overflow:hidden;box-shadow:0 1px 6px rgba(27,58,107,.08);animation:fi .25s ease}
-.oc-hdr{padding:8px 12px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border);background:#FAFBFD}
+.oc{background:white;border-radius:9px;overflow:hidden;box-shadow:0 1px 4px rgba(27,58,107,.07)}
+.oc-hdr{padding:8px 12px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border)}
 .oc-title{font-size:11.5px;font-weight:700;color:var(--navy);flex:1}
 .copy-btn{font-size:10px;padding:2px 8px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;transition:all .15s}
 .copy-btn:hover{background:var(--navy);color:white;border-color:var(--navy)}
-.copy-btn.copied{background:var(--green-bg);color:var(--green);border-color:var(--green)}
 .oc.warn .oc-hdr{background:var(--warn-bg)}
 .oc.warn .oc-title{color:var(--warn)}
 .oc.good .oc-hdr{background:var(--green-bg)}
 .oc.good .oc-title{color:var(--green)}
-.oc-body{padding:10px 12px;font-size:12px;color:var(--text);line-height:1.75}
-.oc-body strong{color:var(--navy)}
-.oc-body em{color:var(--gold);font-style:normal;font-weight:500}
-.placeholder{text-align:center;padding:40px 16px;color:var(--muted)}
-.placeholder-icon{font-size:32px;margin-bottom:10px}
+.oc-body{padding:10px 12px;font-size:12px;color:var(--text);line-height:1.7}
+.placeholder{text-align:center;padding:36px 16px;color:var(--muted)}
+.placeholder-icon{font-size:28px;margin-bottom:9px}
 .placeholder p{font-size:12.5px;line-height:1.6}
 .out-foot{padding:10px 12px;border-top:1px solid var(--border);background:white;flex-shrink:0;display:flex;gap:8px}
-.dl-btn{flex:1;padding:9px;background:var(--gold);color:var(--navy);border:none;border-radius:7px;font-size:12.5px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .18s}
+.dl-btn{flex:1;padding:9px;background:var(--gold);color:var(--navy);border:none;border-radius:7px;font-size:12.5px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .18s}
 .dl-btn:hover{background:var(--gold-l)}
 .dl-btn:disabled{opacity:.4;cursor:not-allowed}
 .mode-switch-btn{padding:9px 14px;background:var(--bg);color:var(--navy);border:1.5px solid var(--border);border-radius:7px;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:all .18s}
 .mode-switch-btn:hover{background:var(--navy);color:white;border-color:var(--navy)}
-@media(max-width:780px){.out-panel{display:none}}
 </style>
 </head>
 <body>
 
-<!-- KEY SCREEN -->
-<div id="key-screen">
-  <div class="key-card">
-    <div class="key-logo">JSU</div>
-    <div class="key-badge">Faculty Development for Student Success · JSU</div>
-    <h1>AI Course Integration Advisor</h1>
-    <p>A responsible AI tool for Jackson State University faculty — helping you integrate AI into your courses while preserving critical thinking, authentic student voice, and scholarly integrity.</p>
-    <div class="key-note">
-      <strong>🔑 Enter your Anthropic API key to begin</strong>
-      Your key is stored only in your browser session and never sent to any third party. Get a free key at <strong>console.anthropic.com</strong> — new accounts receive $5 in free credits.
-    </div>
-    <div class="key-error" id="key-error">Invalid API key. Please check your key and try again.</div>
-    <input class="inp" type="password" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off"/>
-    <button class="btn-navy" onclick="saveKey()">Start the Advisor →</button>
-    <span class="key-link">Version 3.0 · Powered by Claude Sonnet · <a href="https://console.anthropic.com" target="_blank">Get a free API key →</a></span>
-  </div>
-</div>
-
 <!-- APP -->
-<div id="app">
+<div id="app" style="display:flex">
   <div class="hdr">
     <div class="hdr-logo">JSU</div>
     <div class="hdr-info">
-      <div class="hdr-title">AI Course Integration Advisor <span class="hdr-v">v3.0</span></div>
-      <div class="hdr-sub">Faculty Development for Student Success · Jackson State University · MAIN-Aligned</div>
+      <div class="hdr-title">AI Course Integration Advisor <span class="hdr-v">v2.0</span></div>
+      <div class="hdr-sub">Faculty Development for Student Success · Jackson State University</div>
     </div>
-    <div class="hdr-btns">
-      <button class="hdr-reset" onclick="goHome()">⌂ Home</button>
-      <button class="hdr-reset" onclick="changeKey()" title="Change API key">⚙ Key</button>
-    </div>
+    <button class="hdr-reset" onclick="goHome()">⌂ Home</button>
   </div>
 
   <!-- HOME -->
@@ -208,12 +178,12 @@ textarea{resize:vertical;min-height:80px}
     <div class="home-inner">
       <div class="home-tag">Jackson State University · Faculty Development for Student Success</div>
       <div class="home-title">What would you like to do today?</div>
-      <p class="home-desc">Choose a path below. Both tools are designed around one core principle: AI should strengthen student thinking — not replace it.</p>
+      <p class="home-desc">Choose a path below. Both tools are designed around one core principle: AI should support student thinking, not replace it.</p>
       <div class="path-grid">
         <div class="path-card" onclick="goIntake()">
           <span class="path-icon">🗺️</span>
           <div class="path-title">Build a Course Integration Plan</div>
-          <p class="path-desc">Answer a few questions about your course and get a personalized plan — MAIN module recommendations, AI tool guidance, copy-paste faculty prompts, student assignment prompts, and a Critical Thinking Safeguard.</p>
+          <p class="path-desc">Answer a few questions about your course and get a personalized plan — MAIN module recommendations, AI tool guidance, student prompts, and a Critical Thinking Safeguard.</p>
           <div class="path-tags">
             <span class="ptag blue">MAIN Modules</span>
             <span class="ptag blue">Student Prompts</span>
@@ -224,7 +194,7 @@ textarea{resize:vertical;min-height:80px}
         <div class="path-card" onclick="goUpgrader()">
           <span class="path-icon">🔧</span>
           <div class="path-title">Upgrade an Existing Assignment</div>
-          <p class="path-desc">Paste any assignment you already use. The advisor will identify where AI could bypass student thinking and return a revised, AI-resilient version — with a before/after comparison and reasoning scaffolds.</p>
+          <p class="path-desc">Paste any assignment you already use. The advisor will identify where AI could bypass student thinking and return a revised, AI-resilient version — with a before/after example.</p>
           <div class="path-tags">
             <span class="ptag blue">AI Vulnerability Analysis</span>
             <span class="ptag gold">Before / After</span>
@@ -232,20 +202,16 @@ textarea{resize:vertical;min-height:80px}
           <div class="path-cta">Paste an assignment →</div>
         </div>
       </div>
-      <div class="home-footer">
-        Aligned with the <a href="https://mainms.org" target="_blank">Mississippi AI Network (MAIN)</a> framework ·
-        <a href="https://www.jsums.edu/scholars/" target="_blank">JSU Faculty Development</a> ·
-        <a href="https://www.jsums.edu/scholars/faculty-ai-literacy-hub/faculty-ai-resources/" target="_blank">Faculty AI Resources Hub</a>
-      </div>
     </div>
   </div>
 
   <!-- INTAKE -->
   <div id="intake-screen">
     <div class="i-card">
-      <button class="i-back" onclick="goHome()">← Back to Home</button>
+      <button class="i-back" onclick="goHome()">← Back</button>
       <div class="i-title">Build Your AI Integration Plan</div>
-      <p class="i-desc">Tell us about your course. We'll generate recommendations tailored to your discipline, learning objectives, and comfort level with AI — aligned with the MAIN framework.</p>
+      <p class="i-desc">Tell us about your course. We'll generate recommendations tailored to your discipline, learning objectives, and comfort level with AI.</p>
+
       <div class="fg">
         <label>Course Name & Number <span class="hint">e.g., ENG 301: Advanced Writing</span></label>
         <input class="inp" style="margin-bottom:0" type="text" id="cname" placeholder="Course name and number"/>
@@ -253,7 +219,7 @@ textarea{resize:vertical;min-height:80px}
       <div class="row2">
         <div class="fg">
           <label>Discipline / Department</label>
-          <input class="inp" style="margin-bottom:0" type="text" id="disc" placeholder="e.g., English, Biology, Social Work"/>
+          <input class="inp" style="margin-bottom:0" type="text" id="disc" placeholder="e.g., English, Biology, Education"/>
         </div>
         <div class="fg">
           <label>Course Level</label>
@@ -307,17 +273,47 @@ textarea{resize:vertical;min-height:80px}
   <!-- UPGRADER -->
   <div id="upgrader-screen">
     <div class="upg-card">
-      <button class="i-back" onclick="goHome()">← Back to Home</button>
+      <button class="i-back" onclick="goHome()">← Back</button>
       <div class="upg-title">🔧 Upgrade an Existing Assignment</div>
-      <p class="upg-desc">Paste any assignment below — an essay prompt, problem set, lab report, discussion question, anything. The advisor will identify where AI could allow students to skip genuine thinking and return a revised, AI-resilient version with a before/after comparison.</p>
+      <p class="upg-desc">Upload your assignment file or paste the text below. Supports PDFs, Word docs exported as PDF, and images — so science and math faculty can upload assignments with equations, diagrams, or lab sheets.</p>
+
       <div class="fg">
-        <label>Course / Discipline Context <span class="hint">So the advisor can tailor recommendations</span></label>
-        <input class="inp" style="margin-bottom:0" type="text" id="upg-context" placeholder="e.g., Upper-division African American History, focuses on primary source analysis"/>
+        <label>Course / Discipline Context <span class="hint">Helps the advisor tailor recommendations</span></label>
+        <input class="inp" style="margin-bottom:0" type="text" id="upg-context" placeholder="e.g., Upper-division Biology lab, focuses on experimental design"/>
       </div>
-      <div class="fg" style="margin-top:14px">
-        <label>Paste Your Assignment Here</label>
-        <textarea id="upg-assignment" style="min-height:160px" placeholder="Paste your assignment prompt, instructions, or questions here..."></textarea>
+
+      <div class="fg" style="margin-top:16px">
+        <label>Upload Assignment <span class="hint">PDF or image (PNG, JPG, GIF, WebP)</span></label>
+        <div class="upload-zone" id="upload-zone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+          <input type="file" id="file-input" accept=".pdf,image/png,image/jpeg,image/gif,image/webp" onchange="handleFileSelect(event)"/>
+          <div class="uz-icon">📎</div>
+          <div class="uz-title">Click to upload or drag & drop</div>
+          <div class="uz-sub">Your assignment file — works with equations, diagrams, lab sheets</div>
+          <div class="uz-types">
+            <span class="uz-type">PDF</span>
+            <span class="uz-type">PNG</span>
+            <span class="uz-type">JPG</span>
+            <span class="uz-type">GIF</span>
+            <span class="uz-type">WebP</span>
+          </div>
+        </div>
+        <div class="file-preview" id="file-preview">
+          <span class="fp-icon" id="fp-icon">📄</span>
+          <div class="fp-info">
+            <div class="fp-name" id="fp-name"></div>
+            <div class="fp-size" id="fp-size"></div>
+          </div>
+          <button class="fp-remove" onclick="removeFile()" title="Remove file">✕</button>
+        </div>
       </div>
+
+      <div class="or-divider">or type / paste below</div>
+
+      <div class="fg">
+        <label>Assignment Text <span class="hint">Optional if you uploaded a file above</span></label>
+        <textarea id="upg-assignment" style="min-height:120px" placeholder="Paste your assignment prompt, questions, or instructions here..."></textarea>
+      </div>
+
       <button class="btn-navy" onclick="startUpgraderChat()">Analyze & Upgrade →</button>
     </div>
   </div>
@@ -342,7 +338,7 @@ textarea{resize:vertical;min-height:80px}
         </div>
         <div class="msgs" id="msgs"></div>
         <div class="cin-area">
-          <textarea class="cin" id="cin" placeholder="Ask a follow-up or request changes to any section..." onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+          <textarea class="cin" id="cin" placeholder="Ask a follow-up or request changes to any section..." onkeydown="handleKey(event)"></textarea>
           <button class="sbtn" id="sbtn" onclick="sendMsg()">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
@@ -351,7 +347,7 @@ textarea{resize:vertical;min-height:80px}
       <div class="out-panel">
         <div class="out-hdr">
           <h3 id="out-title">Your Integration Plan</h3>
-          <p>Updates as we talk · Copy or download any section</p>
+          <p>Updates as we talk · Ask to revise any section</p>
         </div>
         <div class="out-body" id="out-body">
           <div class="placeholder">
@@ -370,141 +366,131 @@ textarea{resize:vertical;min-height:80px}
 
 <script>
 // ─── STATE ───────────────────────────────────────────────
-let API_KEY = '';
 let history = [];
 let intake = {};
 let outputs = {};
 let hasOutputs = false;
 let currentMode = 'quick';
-let currentFlow = 'plan';
+let currentFlow = 'plan'; // 'plan' or 'upgrade'
+let uploadedFile = null;  // { base64, mediaType, name, size, isImage }
 
 // ─── SYSTEM PROMPTS ──────────────────────────────────────
-const SYS_QUICK = `You are the JSU AI Course Integration Advisor (Quick Plan mode), a warm, collegial, and expert guide for Jackson State University faculty. JSU is a proud HBCU in Jackson, Mississippi. This tool is developed by the Faculty Development for Student Success Center at JSU.
 
-CORE PHILOSOPHY: AI literacy over AI dependency. Preserve critical thinking, authentic student voice, and scholarly integrity. Every recommendation must guard against students using AI to bypass genuine learning.
+const SYS_QUICK = `You are the JSU AI Course Integration Advisor (Quick Plan mode). Your job is to help Jackson State University faculty integrate AI into their courses RESPONSIBLY in a way that preserves critical thinking, authentic student voice, and scholarly integrity. This tool is developed by the Faculty Development for Student Success Center at Jackson State University.
 
-HBCU CONTEXT: Be aware of the particular strengths, mission, and community of HBCUs. Honor the legacy of critical thought, social justice scholarship, and community engagement that defines JSU's academic identity. Recommendations should reflect this context.
+CORE PHILOSOPHY: AI literacy over AI dependency. The primary risk is students over-relying on AI and failing to develop their own thinking, losing authentic voice, and missing the opportunity to contribute something original to scholarly conversations. Every recommendation must guard against this.
 
-MISSISSIPPI AI NETWORK (MAIN) MODULES — free, self-paced via Canvas (~64 hrs each):
-• AI Foundations for Educators (Intro to AI): Core concepts, history, societal impacts, ethical considerations
-• Generative AI: How LLMs produce content, prompt engineering, practical applications
-• AI Ethics & Responsible Use (Applied Ethics for AI): Bias, fairness, transparency, governance, equity
-• AI for Student Research & Information Literacy: Evaluating AI-generated content, source verification
-• Data-Centric AI: Data quality, preparation, interpretation — key for STEM/Social Science
-• AI for STEM & Quantitative Fields: Applied Mathematics for AI, computer vision, machine learning
-• AI for Health & Human Services: Applications in healthcare, social services, public health
-• AI for Cybersecurity: Threat detection, responsible AI in security contexts
-• AI for Sustainability: Environmental monitoring, climate modeling
-• NVIDIA Deep Learning Institute (DLI): Advanced AI training for faculty ambassadors
+MISSISSIPPI AI NETWORK (MAIN) MODULES (16 total via Canvas, ~64 hrs):
+• Intro to AI: Core concepts, history, how AI systems work
+• Intro to Generative AI: How ChatGPT/image generators produce content
+• Intro to Machine Learning: Patterns, supervised/unsupervised learning
+• AI Ethics & Responsible Use: Bias, fairness, transparency, governance
+• Natural Language Processing: How AI processes/generates human language
+• Computer Vision: Image recognition, visual AI systems
+• Data-Centric AI: Data quality, preparation, interpretation
+• AI for Manufacturing, Cybersecurity, Sustainability (domain modules)
+• Applied Mathematics for AI: Stats, linear algebra, probability
 
-FACULTY TOOLS: Claude (course redesign, rubrics, syllabus language), NotebookLM (synthesizing readings), Perplexity (cited research), ChatGPT (brainstorming)
-STUDENT TOOLS: Claude, ChatGPT, Gemini, Perplexity (with appropriate guardrails)
+AI TOOLS FOR FACULTY REDESIGN: Claude (curriculum/rubrics/planning), ChatGPT (brainstorming), NotebookLM (synthesizing course materials), Perplexity (cited research)
+APPROVED STUDENT TOOLS: ChatGPT, Claude, Gemini, Perplexity
 
-JSU RESOURCES TO REFERENCE:
-• Faculty Development for Student Success: jsums.edu/scholars/
-• Faculty AI Resources Hub: jsums.edu/scholars/faculty-ai-literacy-hub/faculty-ai-resources/
-• MAIN: mainms.org
+QUICK PLAN — generate ALL FIVE sections below. Be specific, discipline-aware, and concise. Start immediately without asking extra questions unless the course info is too vague to proceed.
 
-QUICK PLAN — generate ALL FIVE sections using EXACTLY these delimiters. Be specific, discipline-aware, and immediately actionable. Start without asking extra questions unless the course info is too vague.
+Use EXACTLY these delimiters:
 
 ===MAIN MODULES===
-Recommend 2 MAIN modules. For each: name, one sentence on why it fits this specific course, and one concrete action they can take from it this semester.
+Recommend 2 MAIN modules. For each: name, one sentence on why it fits this course, and the integration level (Level 1: discussion starter / Level 2: applied activity / Level 3: embedded assignment).
 
 ===FACULTY TOOL===
-Recommended tool + one sentence rationale. Then 3 ready-to-copy prompts the faculty member can paste into that tool RIGHT NOW to start redesigning their course (write prompts out fully — no blanks).
+Recommended tool + one sentence rationale. Then 3 ready-to-copy prompts the faculty member can paste directly into that tool RIGHT NOW to start redesigning.
 
 ===STUDENT TOOL===
-Recommended tool + one sentence rationale. Then 3 concrete guardrails for how students should use it in this specific course (not generic advice). Include one sample AI use policy sentence for their syllabus.
+Recommended tool + one sentence rationale. Then 3 concise guidelines for how students should use it in this specific course (not generic advice).
 
 ===STUDENT PROMPTS===
-2–3 complete, ready-to-use assignment prompts specific to this discipline and level. Each must:
-- Require genuine student thinking AI cannot simply replace
-- Include a reflection or accountability component
-- Frame a "your job" component that demands student-originated reasoning
+2 complete, ready-to-use assignment prompts students can paste into the recommended AI tool. Make them SPECIFIC to the discipline and learning objectives. Frame them so students must contribute genuine thinking — not just accept AI output. Each prompt should include a "your job" component that requires student-originated reasoning.
 
 ===CRITICAL THINKING SAFEGUARD===
-⚠️ Risk: [the single most likely place AI could bypass genuine learning in THIS specific course — be concrete]
-✅ Fix: [a modified assignment approach that closes the gap]
-❓ Discussion Question: [one question faculty can pose to students about this risk]
+Format as:
+⚠️ Risk 1: [specific to this course — one sentence]
+✅ Fix: [concrete modification that preserves student thinking — one sentence]
 
-📜 Sample Syllabus Policy Language:
-[2–3 sentences of course-ready AI policy the faculty member can paste directly into their syllabus]
+⚠️ Risk 2: [different risk]
+✅ Fix: [concrete modification]
 
-💡 One Quick Win This Week:
-[Single most actionable thing this faculty member can do in the next 7 days — specific, takes 30 min or less]`;
+📜 Sample Policy Language:
+[2–3 sentences of course-ready AI policy language the faculty member can paste into their syllabus]
 
-const SYS_DEEP = `You are the JSU AI Course Integration Advisor (Deep Plan mode), a warm, collegial, and expert guide for Jackson State University faculty. JSU is a proud HBCU in Jackson, Mississippi. This tool is developed by the Faculty Development for Student Success Center at JSU.
+🏁 One Low-Lift Action for This Week:
+[Single most actionable thing this faculty member can do in the next 7 days — be specific]`;
 
-CORE PHILOSOPHY: AI literacy over AI dependency. Students must be able to think, reason, and explain without AI. Preserve critical thinking, authentic student voice, and scholarly integrity.
+const SYS_DEEP = `You are the JSU AI Course Integration Advisor (Deep Plan mode). Your job is to help Jackson State University faculty comprehensively redesign their courses to integrate AI responsibly — preserving critical thinking, authentic student voice, and scholarly integrity. This tool is developed by the Faculty Development for Student Success Center at Jackson State University.
 
-HBCU CONTEXT: Honor JSU's legacy of critical thought, social justice scholarship, and community engagement. Recommendations should reflect the HBCU mission and community.
+CORE PHILOSOPHY: AI literacy over AI dependency. Students must be able to think, reason, and explain without AI. Every recommendation must guard against AI replacing rather than supporting genuine learning.
 
-MISSISSIPPI AI NETWORK (MAIN) MODULES — free, self-paced via Canvas (~64 hrs each):
-• AI Foundations for Educators, Generative AI, AI Ethics & Responsible Use
-• AI for Student Research & Information Literacy, Data-Centric AI
-• AI for STEM & Quantitative Fields, AI for Health & Human Services
-• AI for Cybersecurity, AI for Sustainability
-• NVIDIA Deep Learning Institute (DLI) for advanced faculty
+MISSISSIPPI AI NETWORK (MAIN) MODULES (16 total via Canvas, ~64 hrs):
+• Intro to AI, Intro to Generative AI, Intro to Machine Learning
+• AI Ethics & Responsible Use, NLP, Computer Vision, Data-Centric AI
+• AI for Manufacturing, Cybersecurity, Sustainability
+• Applied Mathematics for AI
 
-FACULTY TOOLS: Claude, NotebookLM, Perplexity, ChatGPT
-STUDENT TOOLS: Claude, ChatGPT, Gemini, Perplexity
+AI TOOLS FOR FACULTY REDESIGN: Claude, ChatGPT, NotebookLM, Perplexity
+APPROVED STUDENT TOOLS: ChatGPT, Claude, Gemini, Perplexity
 
-JSU RESOURCES: jsums.edu/scholars/ | jsums.edu/scholars/faculty-ai-literacy-hub/faculty-ai-resources/ | mainms.org
-
-DEEP PLAN — generate ALL sections with discipline-specific depth. Use EXACTLY these delimiters:
+DEEP PLAN — generate ALL sections below with depth and discipline-specific detail. Use EXACTLY these delimiters:
 
 ===MAIN MODULES===
-3 recommended MAIN modules. For each: name, why it fits this specific course, one concrete action this semester, and what learning is lost if AI replaces this skill entirely.
+3 recommended MAIN modules. For each: name, why it fits, integration level, AND what students gain AND what the risk is if this is NOT taught.
 
 ===FACULTY TOOL===
-Recommended tool + rationale + 3 ready-to-copy redesign prompts (fully written out, specific to their course).
+Recommended tool + rationale + 3 ready-to-copy redesign prompts.
 
 ===STUDENT TOOL===
-Recommended tool + rationale + 3 structured student guidelines specific to this course + one syllabus policy statement.
+Recommended tool + rationale + structured student guidelines.
 
 ===STUDENT PROMPTS===
-3 complete student-facing assignment prompts specific to this course. Each must include a component requiring student-originated reasoning AI cannot supply, plus a reflection layer.
+3 complete student-facing prompts, specific to this course. Each must include a component requiring student-originated reasoning that AI cannot supply.
 
 ===ASSIGNMENT REDESIGN===
-Identify 2 common assignment types in this discipline.
-For each:
-BEFORE (AI-vulnerable version): [example]
-AFTER (AI-resilient version): [revised with reasoning layer that requires genuine student thinking]
-What changed and why: [1–2 sentences of pedagogical rationale]
+Key principle: If AI can complete the task without thinking, the task needs redesign.
 
-3 reasoning scaffold phrases faculty can add to any assignment in this discipline.
+Identify 2 common assignment types in this discipline. For each:
+BEFORE (AI-vulnerable version): [example]
+AFTER (AI-resilient version): [revised with reasoning layer, error analysis, or multi-step explanation requirement]
+
+Provide 3 reasoning scaffold phrases faculty can add to any assignment:
+- "This step works because..."
+- [2 more specific to the discipline]
 
 ===AI USE POLICY===
 Option A — Guided Use (recommended): [3-sentence syllabus-ready policy]
 Option B — Restricted Use: [2-sentence alternative]
-Privacy guidance: [one sentence about what student data faculty should NOT put into AI tools]
+In-class vs. out-of-class guidance: [one paragraph]
 
 ===ASSESSMENT SHIFTS===
-2–3 specific recommendations for adjusting assessment to reward reasoning over answers.
-Include a sample rubric row showing how to weight explanation/reasoning (suggest 20–30% of grade).
+2–3 specific recommendations for adjusting assessment to reward reasoning over answers. Include a sample rubric row showing how to weight explanation/reasoning (suggested: 20–30% of grade).
 
 ===CRITICAL THINKING SAFEGUARD===
 3 risks specific to this course, each with a concrete fix.
-One "AI Failure" classroom activity: give students an AI-generated response with a discipline-specific error and ask them to find and correct it.
-One discussion question faculty can pose to students about AI's limits in this field.
+Then: one "AI Failure" classroom activity — give students an AI-generated response with an error and ask them to find and fix it.
 
 ===IMPLEMENTATION ROADMAP===
-This week: [one specific action — 30 min or less]
+This week: [one specific action]
 This month: [2–3 actions]
-By end of semester: [2–3 milestone goals]
+By end of semester: [2–3 actions]
 Keep it realistic — faculty have full course loads.
 
 ===CORE TAKEAWAY===
-One powerful sentence summarizing the guiding AI philosophy for this specific faculty member's course.`;
+One powerful sentence summarizing the guiding philosophy for this specific faculty member's course.`;
 
-const SYS_UPGRADE = `You are the JSU AI Course Integration Advisor — Assignment Upgrader mode. JSU is a proud HBCU in Jackson, Mississippi. A faculty member will paste an existing assignment. Your job is to:
+const SYS_UPGRADE = `You are the JSU AI Course Integration Advisor — Assignment Upgrader mode. A faculty member will paste an existing assignment. Your job is to:
 
 1. ANALYZE: Identify specifically where and how AI could allow students to bypass genuine thinking — be concrete, not generic.
 
 2. PRODUCE a structured upgrade using EXACTLY these delimiters:
 
 ===VULNERABILITY ANALYSIS===
-List 2–3 specific AI vulnerabilities in this assignment. For each: what a student could do with AI to complete the work without genuine understanding, and what learning is lost as a result. Be direct but collegial — the original assignment is not bad, it just needs a thinking layer added.
+List 2–3 specific AI vulnerabilities in this assignment. For each: what a student could do with AI to complete the work without understanding, and what learning is lost as a result.
 
 ===BEFORE / AFTER===
 BEFORE (original — AI vulnerable):
@@ -522,89 +508,59 @@ What changed and why: [2–3 sentences explaining the pedagogical logic of the r
 3. "..."
 
 ===POLICY LANGUAGE===
-2–3 sentences of assignment-level AI policy language specific to this task (not a generic course policy).
+2–3 sentences of assignment-level AI policy language specific to this task (not generic course policy).
 
 ===QUICK WIN===
-The single highest-impact change the faculty member can make to this assignment RIGHT NOW — one sentence, immediately actionable.
+The single highest-impact change the faculty member can make to this assignment RIGHT NOW — in one sentence.
 
-Be warm, direct, and discipline-aware. Never be condescending about the original assignment.`;
-
-// ─── KEY / SETUP ─────────────────────────────────────────
-window.addEventListener('DOMContentLoaded', () => {
-  const stored = sessionStorage.getItem('jsu_api_key');
-  if (stored) { API_KEY = stored; showApp(); }
-  document.getElementById('api-key-input').addEventListener('keydown', e => {
-    if (e.key === 'Enter') saveKey();
-  });
-});
-
-function saveKey() {
-  const k = document.getElementById('api-key-input').value.trim();
-  const err = document.getElementById('key-error');
-  err.style.display = 'none';
-  if (!k.startsWith('sk-')) {
-    err.textContent = 'Please enter a valid Anthropic API key (starts with sk-).';
-    err.style.display = 'block';
-    return;
-  }
-  API_KEY = k;
-  sessionStorage.setItem('jsu_api_key', k);
-  showApp();
-}
-
-function showApp() {
-  document.getElementById('key-screen').style.display = 'none';
-  document.getElementById('app').style.display = 'flex';
-}
-
-function changeKey() {
-  sessionStorage.removeItem('jsu_api_key');
-  API_KEY = '';
-  document.getElementById('key-screen').style.display = 'flex';
-  document.getElementById('app').style.display = 'none';
-  document.getElementById('api-key-input').value = '';
-  document.getElementById('key-error').style.display = 'none';
-}
+Be direct, warm, and collegial. Acknowledge that the original assignment is not bad — it just needs a thinking layer added. Never be condescending about the original.`;
 
 // ─── NAVIGATION ──────────────────────────────────────────
 function goHome() {
-  hideAll();
+  hide(['intake-screen','upgrader-screen','chat-view']);
   show('home-screen');
   history = []; outputs = {}; hasOutputs = false; intake = {};
+  uploadedFile = null;
+  // Reset upgrader UI
+  const zi = document.getElementById('file-input');
+  if (zi) zi.value = '';
+  const zn = document.getElementById('upload-zone');
+  if (zn) {
+    zn.classList.remove('has-file');
+    zn.querySelector('.uz-icon').textContent = '📎';
+    zn.querySelector('.uz-title').textContent = 'Click to upload or drag & drop';
+    zn.querySelector('.uz-sub').textContent = 'Your assignment file — works with equations, diagrams, lab sheets';
+  }
+  const fp = document.getElementById('file-preview');
+  if (fp) fp.classList.remove('show');
 }
-function goIntake() { hideAll(); show('intake-screen'); }
-function goUpgrader() { hideAll(); show('upgrader-screen'); }
-function hideAll() {
-  ['home-screen','intake-screen','upgrader-screen','chat-view'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = 'none';
-  });
-}
-function show(id) {
-  const el = document.getElementById(id);
-  if (el) el.style.display = id === 'chat-view' ? 'flex' : 'block';
-}
+
+function goIntake() { hide(['home-screen']); show('intake-screen'); }
+function goUpgrader() { hide(['home-screen','chat-view']); show('upgrader-screen'); }
+
+function show(id) { const el = document.getElementById(id); if(el) el.style.display = 'block'; }
+function hide(ids) { ids.forEach(id => { const el = document.getElementById(id); if(el) el.style.display = 'none'; }); }
 
 // ─── INTAKE FLOW ─────────────────────────────────────────
 function startIntakeChat() {
   const cname = document.getElementById('cname').value.trim();
-  const disc  = document.getElementById('disc').value.trim();
+  const disc = document.getElementById('disc').value.trim();
   if (!cname || !disc) { alert('Please fill in at least the course name and discipline.'); return; }
 
   currentMode = document.getElementById('plandepth').value;
   currentFlow = 'plan';
   intake = { cname, disc,
-    lvl:     document.getElementById('lvl').value,
-    obj:     document.getElementById('obj').value.trim(),
+    lvl: document.getElementById('lvl').value,
+    obj: document.getElementById('obj').value.trim(),
     concern: document.getElementById('concern').value,
     comfort: document.getElementById('comfort').value
   };
 
-  hideAll(); show('chat-view');
+  hide(['intake-screen']); show('chat-view');
+  document.getElementById('chat-view').style.display = 'flex';
   document.getElementById('mode-bar').style.display = 'flex';
   document.getElementById('out-title').textContent = currentMode === 'quick' ? '⚡ Quick Integration Plan' : '📘 Deep Integration Plan';
   document.getElementById('chat-title').textContent = 'AI Course Integration Advisor';
-  document.getElementById('chat-subtitle').textContent = 'Ask follow-up questions or request revisions to any section';
   document.getElementById('upgrade-from-plan-btn').style.display = 'block';
   updateModeUI();
 
@@ -614,20 +570,85 @@ function startIntakeChat() {
 
   const msg = `I'm working on ${cname} — a ${intake.lvl || 'university-level'} course in ${intake.disc}.${intake.obj ? '\n\nLearning objectives: ' + intake.obj : ''}${intake.concern ? '\n\nMy main concern about AI: ' + intake.concern : ''}${intake.comfort ? '\n\nMy AI experience: ' + intake.comfort : ''}\n\nPlease generate my ${currentMode === 'quick' ? 'Quick' : 'Deep'} AI integration plan.`;
 
-  history = [{ role: 'user', content: msg }];
+  history = [{ role:'user', content: msg }];
   callAPI();
+}
+
+// ─── FILE HANDLING ───────────────────────────────────────
+function handleDragOver(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.add('drag-over');
+}
+function handleDragLeave(e) {
+  document.getElementById('upload-zone').classList.remove('drag-over');
+}
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) processFile(file);
+}
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  if (file) processFile(file);
+}
+
+function processFile(file) {
+  const allowed = ['application/pdf','image/png','image/jpeg','image/gif','image/webp'];
+  if (!allowed.includes(file.type)) {
+    alert('Please upload a PDF or image file (PNG, JPG, GIF, WebP).');
+    return;
+  }
+  if (file.size > 20 * 1024 * 1024) {
+    alert('File is too large. Please keep files under 20MB.');
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const base64 = e.target.result.split(',')[1];
+    const isImage = file.type.startsWith('image/');
+    uploadedFile = { base64, mediaType: file.type, name: file.name, size: file.size, isImage };
+    // Update UI
+    const zone = document.getElementById('upload-zone');
+    zone.classList.add('has-file');
+    zone.querySelector('.uz-icon').textContent = isImage ? '🖼️' : '📄';
+    zone.querySelector('.uz-title').textContent = 'File ready';
+    zone.querySelector('.uz-sub').textContent = 'Click to replace';
+    const preview = document.getElementById('file-preview');
+    preview.classList.add('show');
+    document.getElementById('fp-icon').textContent = isImage ? '🖼️' : '📄';
+    document.getElementById('fp-name').textContent = file.name;
+    document.getElementById('fp-size').textContent = (file.size / 1024).toFixed(0) + ' KB · ' + (isImage ? 'Image' : 'PDF');
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeFile() {
+  uploadedFile = null;
+  document.getElementById('file-input').value = '';
+  const zone = document.getElementById('upload-zone');
+  zone.classList.remove('has-file');
+  zone.querySelector('.uz-icon').textContent = '📎';
+  zone.querySelector('.uz-title').textContent = 'Click to upload or drag & drop';
+  zone.querySelector('.uz-sub').textContent = 'Your assignment file — works with equations, diagrams, lab sheets';
+  document.getElementById('file-preview').classList.remove('show');
 }
 
 // ─── UPGRADER FLOW ───────────────────────────────────────
 function startUpgraderChat() {
-  const ctx  = document.getElementById('upg-context').value.trim();
+  const ctx = document.getElementById('upg-context').value.trim();
   const asgn = document.getElementById('upg-assignment').value.trim();
-  if (!asgn) { alert('Please paste your assignment first.'); return; }
+
+  if (!uploadedFile && !asgn) {
+    alert('Please upload a file or paste your assignment text first.');
+    return;
+  }
 
   currentFlow = 'upgrade';
   intake = { cname: ctx || 'Assignment', disc: ctx };
 
-  hideAll(); show('chat-view');
+  hide(['upgrader-screen']);
+  document.getElementById('chat-view').style.display = 'flex';
   document.getElementById('mode-bar').style.display = 'none';
   document.getElementById('out-title').textContent = '🔧 Assignment Upgrade';
   document.getElementById('chat-title').textContent = 'Assignment Upgrader';
@@ -637,8 +658,20 @@ function startUpgraderChat() {
   document.getElementById('out-body').innerHTML = '<div class="placeholder"><div class="placeholder-icon">🔧</div><p>Your vulnerability analysis and upgraded assignment will appear here.</p></div>';
   document.getElementById('dl-btn').disabled = true;
 
-  const msg = `${ctx ? 'Course context: ' + ctx + '\n\n' : ''}Here is the assignment I want to upgrade:\n\n${asgn}`;
-  history = [{ role: 'user', content: msg }];
+  // Build message content — multipart if file uploaded
+  const textPart = `${ctx ? 'Course context: ' + ctx + '\n\n' : ''}${asgn ? 'Additional context from faculty:\n' + asgn + '\n\n' : ''}Please analyze this assignment and generate the full upgrade.`;
+
+  let messageContent;
+  if (uploadedFile) {
+    const filePart = uploadedFile.isImage
+      ? { type: 'image', source: { type: 'base64', media_type: uploadedFile.mediaType, data: uploadedFile.base64 } }
+      : { type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: uploadedFile.base64 } };
+    messageContent = [ filePart, { type: 'text', text: textPart } ];
+  } else {
+    messageContent = `${ctx ? 'Course context: ' + ctx + '\n\n' : ''}Here is the assignment I want to upgrade:\n\n${asgn}`;
+  }
+
+  history = [{ role: 'user', content: messageContent }];
   callAPI();
 }
 
@@ -650,34 +683,26 @@ function switchMode(mode) {
   document.getElementById('out-title').textContent = mode === 'quick' ? '⚡ Quick Integration Plan' : '📘 Deep Integration Plan';
   const msg = `Please regenerate my plan as a ${mode === 'quick' ? 'Quick Plan (concise, immediately actionable)' : 'Deep Plan (comprehensive redesign framework)'}.`;
   addMsg('usr', msg);
-  history.push({ role: 'user', content: msg });
+  history.push({ role:'user', content: msg });
   callAPI();
 }
 
 function updateModeUI() {
-  document.getElementById('mode-quick').className = 'mt-btn' + (currentMode === 'quick' ? ' active' : '');
-  document.getElementById('mode-deep').className  = 'mt-btn' + (currentMode === 'deep'  ? ' active' : '');
-  document.getElementById('mode-hint').textContent = currentMode === 'quick' ? 'Key recommendations only' : 'Full redesign framework';
+  document.getElementById('mode-quick').className = 'mt-btn' + (currentMode==='quick'?' active':'');
+  document.getElementById('mode-deep').className = 'mt-btn' + (currentMode==='deep'?' active':'');
+  document.getElementById('mode-hint').textContent = currentMode==='quick' ? 'Key recommendations only' : 'Full redesign framework';
 }
 
 // ─── CHAT ────────────────────────────────────────────────
-function handleKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
-}
-
-function autoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
-}
+function handleKey(e) { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();} }
 
 function sendMsg() {
   const el = document.getElementById('cin');
   const txt = el.value.trim();
-  if (!txt || document.getElementById('sbtn').disabled) return;
+  if(!txt || document.getElementById('sbtn').disabled) return;
   el.value = '';
-  el.style.height = 'auto';
   addMsg('usr', txt);
-  history.push({ role: 'user', content: txt });
+  history.push({ role:'user', content: txt });
   callAPI();
 }
 
@@ -685,14 +710,12 @@ function addMsg(who, text) {
   const c = document.getElementById('msgs');
   const d = document.createElement('div');
   d.className = `msg ${who}`;
-  d.innerHTML = `<div class="av">${who === 'bot' ? 'AI' : 'You'}</div><div class="bbl">${fmtChat(text)}</div>`;
+  d.innerHTML = `<div class="av">${who==='bot'?'AI':'You'}</div><div class="bbl">${fmtChat(text)}</div>`;
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
 }
 
-const ALL_DELIMITERS = ['MAIN MODULES','FACULTY TOOL','STUDENT TOOL','STUDENT PROMPTS','CRITICAL THINKING SAFEGUARD',
-  'ASSIGNMENT REDESIGN','AI USE POLICY','ASSESSMENT SHIFTS','IMPLEMENTATION ROADMAP','CORE TAKEAWAY',
-  'VULNERABILITY ANALYSIS','BEFORE / AFTER','REASONING SCAFFOLDS','POLICY LANGUAGE','QUICK WIN'];
+const ALL_DELIMITERS = ['MAIN MODULES','FACULTY TOOL','STUDENT TOOL','STUDENT PROMPTS','CRITICAL THINKING SAFEGUARD','ASSIGNMENT REDESIGN','AI USE POLICY','ASSESSMENT SHIFTS','IMPLEMENTATION ROADMAP','CORE TAKEAWAY','VULNERABILITY ANALYSIS','BEFORE / AFTER','REASONING SCAFFOLDS','POLICY LANGUAGE','QUICK WIN'];
 
 function fmtChat(txt) {
   let t = txt;
@@ -700,37 +723,33 @@ function fmtChat(txt) {
     t = t.replace(new RegExp(`===${d}===([\\s\\S]*?)(?====|$)`, 'g'), '');
   });
   t = t.trim();
-  if (!t) t = currentFlow === 'upgrade'
-    ? "I've analyzed your assignment — the upgrade is in the panel on the right. Ask me to adjust any section."
-    : "Your plan is ready in the panel on the right! Ask me to adjust anything or go deeper on any section.";
-  return t
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/^## (.+)$/gm, '<h3>$1</h3>')
-    .replace(/\n/g, '<br>');
+  if(!t) t = currentFlow === 'upgrade'
+    ? "I've analyzed your assignment and the upgrade is in the panel on the right. Ask me to adjust any section or try a different approach."
+    : "Your plan is ready in the panel on the right! Ask me to adjust anything, switch plan depth, or go deeper on any section.";
+  return t.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
 }
 
 function showTyping() {
   const c = document.getElementById('msgs');
   const d = document.createElement('div');
-  d.className = 'msg bot'; d.id = 'typing';
-  d.innerHTML = `<div class="av">AI</div><div class="bbl"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;
-  c.appendChild(d); c.scrollTop = c.scrollHeight;
+  d.className='msg bot'; d.id='typing';
+  d.innerHTML=`<div class="av">AI</div><div class="bbl"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;
+  c.appendChild(d); c.scrollTop=c.scrollHeight;
 }
-function hideTyping() { const el = document.getElementById('typing'); if (el) el.remove(); }
+function hideTyping(){const el=document.getElementById('typing');if(el)el.remove();}
 
 // ─── OUTPUTS ─────────────────────────────────────────────
 const PLAN_DEFS = [
-  { key:'MAIN MODULES',                icon:'📚', title:'MAIN Module Recommendations',   cls:''     },
-  { key:'FACULTY TOOL',                icon:'🛠️', title:'AI Tool for Your Redesign',      cls:''     },
-  { key:'STUDENT TOOL',                icon:'🎓', title:'AI Tool for Students + Guardrails', cls:''  },
-  { key:'STUDENT PROMPTS',             icon:'✏️', title:'Student-Facing Assignment Prompts', cls:'good' },
-  { key:'ASSIGNMENT REDESIGN',         icon:'🔄', title:'Assignment Redesign Strategies', cls:''     },
-  { key:'AI USE POLICY',               icon:'📜', title:'AI Policy Language',             cls:''     },
-  { key:'ASSESSMENT SHIFTS',           icon:'📊', title:'Assessment Adjustments',         cls:''     },
-  { key:'CRITICAL THINKING SAFEGUARD', icon:'🛡️', title:'Critical Thinking Safeguard',   cls:'warn' },
-  { key:'IMPLEMENTATION ROADMAP',      icon:'🗓️', title:'Implementation Roadmap',         cls:''     },
-  { key:'CORE TAKEAWAY',               icon:'🎯', title:'Core Takeaway',                  cls:'good' },
+  { key:'MAIN MODULES',               icon:'📚', title:'MAIN Module Recommendations',  cls:''     },
+  { key:'FACULTY TOOL',               icon:'🛠️', title:'AI Tool for Your Redesign',     cls:''     },
+  { key:'STUDENT TOOL',               icon:'🎓', title:'AI Tool for Students',           cls:''     },
+  { key:'STUDENT PROMPTS',            icon:'✏️', title:'Student-Facing Prompts',         cls:'good' },
+  { key:'ASSIGNMENT REDESIGN',        icon:'🔄', title:'Assignment Redesign Strategies', cls:''     },
+  { key:'AI USE POLICY',              icon:'📜', title:'AI Policy Language',             cls:''     },
+  { key:'ASSESSMENT SHIFTS',          icon:'📊', title:'Assessment Adjustments',         cls:''     },
+  { key:'CRITICAL THINKING SAFEGUARD',icon:'🛡️', title:'Critical Thinking Safeguard',   cls:'warn' },
+  { key:'IMPLEMENTATION ROADMAP',     icon:'🗓️', title:'Implementation Roadmap',         cls:''     },
+  { key:'CORE TAKEAWAY',              icon:'🎯', title:'Core Takeaway',                  cls:'good' },
 ];
 
 const UPGRADE_DEFS = [
@@ -746,9 +765,9 @@ function extractOutputs(txt) {
   let found = false;
   defs.forEach(d => {
     const m = txt.match(new RegExp(`===${d.key}===([\\s\\S]*?)(?====|$)`));
-    if (m) { outputs[d.key] = { ...d, content: m[1].trim() }; found = true; }
+    if(m){ outputs[d.key] = { ...d, content: m[1].trim() }; found = true; }
   });
-  if (found) renderOutputs();
+  if(found) renderOutputs();
 }
 
 function renderOutputs() {
@@ -757,25 +776,21 @@ function renderOutputs() {
   hasOutputs = true;
   const defs = currentFlow === 'upgrade' ? UPGRADE_DEFS : PLAN_DEFS;
   defs.forEach(d => {
-    if (!outputs[d.key]) return;
+    if(!outputs[d.key]) return;
     const card = document.createElement('div');
-    card.className = `oc${d.cls ? ' ' + d.cls : ''}`;
+    card.className = `oc${d.cls?' '+d.cls:''}`;
     const content = outputs[d.key].content
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\n/g, '<br>');
-    card.innerHTML = `<div class="oc-hdr"><span>${d.icon}</span><span class="oc-title">${d.title}</span><button class="copy-btn" onclick="copySection('${d.key}', this)">Copy</button></div><div class="oc-body">${content}</div>`;
+      .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+      .replace(/\n/g,'<br>');
+    card.innerHTML = `<div class="oc-hdr"><span>${d.icon}</span><span class="oc-title">${d.title}</span><button class="copy-btn" onclick="copySection('${d.key}')">Copy</button></div><div class="oc-body">${content}</div>`;
     el.appendChild(card);
   });
   document.getElementById('dl-btn').disabled = false;
 }
 
-function copySection(key, btn) {
-  if (outputs[key]) {
-    navigator.clipboard.writeText(outputs[key].content).then(() => {
-      btn.textContent = '✓ Copied';
-      btn.classList.add('copied');
-      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-    }).catch(() => {});
+function copySection(key) {
+  if(outputs[key]) {
+    navigator.clipboard.writeText(outputs[key].content).catch(()=>{});
   }
 }
 
@@ -785,57 +800,43 @@ async function callAPI() {
   showTyping();
   const sys = currentFlow === 'upgrade' ? SYS_UPGRADE : (currentMode === 'deep' ? SYS_DEEP : SYS_QUICK);
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch('/.netlify/functions/claude-proxy', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': API_KEY,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-calls': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2048,
-        system: sys,
-        messages: history
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-opus-4-5', max_tokens: 1800, system: sys, messages: history })
     });
     const data = await res.json();
-    if (!res.ok) {
-      if (res.status === 401) throw new Error('Invalid API key. Click "⚙ Key" in the header to update it.');
-      throw new Error(data.error?.message || `API error (${res.status})`);
-    }
+    if (!res.ok) throw new Error(data.error?.message || 'API error');
     const reply = data.content[0].text;
     history.push({ role: 'assistant', content: reply });
     hideTyping();
     addMsg('bot', reply);
     extractOutputs(reply);
-  } catch (e) {
+  } catch(e) {
     hideTyping();
-    addMsg('bot', `⚠️ Something went wrong: ${e.message}`);
+    addMsg('bot', `Something went wrong: ${e.message}. Please try again or contact support.`);
   }
   document.getElementById('sbtn').disabled = false;
-  document.getElementById('msgs').scrollTop = document.getElementById('msgs').scrollHeight;
 }
 
 // ─── DOWNLOAD ────────────────────────────────────────────
 function downloadPlan() {
-  if (!hasOutputs) return;
+  if(!hasOutputs) return;
   const isUpgrade = currentFlow === 'upgrade';
   const defs = isUpgrade ? UPGRADE_DEFS : PLAN_DEFS;
   let txt = isUpgrade
-    ? `JSU AI ADVISOR — ASSIGNMENT UPGRADE REPORT\n${'═'.repeat(60)}\nContext: ${intake.cname}\nGenerated: ${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}\n\n`
-    : `JSU AI COURSE INTEGRATION PLAN ${currentMode === 'quick' ? '(Quick)' : '(Deep)'}\n${'═'.repeat(60)}\nCourse: ${intake.cname}  |  Department: ${intake.disc}\nGenerated: ${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}\n\n`;
+    ? `JSU AI ADVISOR — ASSIGNMENT UPGRADE REPORT\n${'═'.repeat(60)}\nContext: ${intake.cname}\n\n`
+    : `JSU AI COURSE INTEGRATION PLAN ${currentMode==='quick'?'(Quick)':'(Deep)'}\n${'═'.repeat(60)}\nCourse: ${intake.cname}  |  Department: ${intake.disc}\nGenerated: ${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}\n\n`;
   defs.forEach(d => {
-    if (!outputs[d.key]) return;
+    if(!outputs[d.key]) return;
     txt += `${d.icon} ${d.title.toUpperCase()}\n${'─'.repeat(44)}\n${outputs[d.key].content}\n\n`;
   });
-  txt += `\n${'═'.repeat(60)}\nJackson State University · Faculty Development for Student Success\njsums.edu/scholars · MAIN-Aligned Framework · mainms.org`;
-  const blob = new Blob([txt], { type: 'text/plain' });
+  txt += `\n${'═'.repeat(60)}\nJackson State University · Faculty Development for Student Success`;
+  const blob = new Blob([txt],{type:'text/plain'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
-  a.download = `JSU_AI_${isUpgrade ? 'Upgrade' : 'Plan'}_${intake.cname.replace(/\s+/g,'_')}.txt`;
+  a.href=url;
+  a.download=`JSU_AI_${isUpgrade?'Upgrade':'Plan'}_${intake.cname.replace(/\s+/g,'_')}.txt`;
   a.click();
   URL.revokeObjectURL(url);
 }
