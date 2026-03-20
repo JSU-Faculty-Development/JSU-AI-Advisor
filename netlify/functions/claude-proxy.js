@@ -31,11 +31,11 @@ exports.handler = async function(event) {
     });
 
     req.on('error', (err) => {
-      resolve({
-        statusCode: 500,
-        body: JSON.stringify({ error: err.message })
-      });
-    });
+  resolve({
+    statusCode: 500,
+    body: JSON.stringify({ error: { message: err.message, type: 'connection_error' } })
+  });
+});
 
     req.write(event.body);
     req.end();
